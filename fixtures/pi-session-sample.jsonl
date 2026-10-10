@@ -1,0 +1,5 @@
+{"type": "session", "version": 3, "id": "pi-demo", "cwd": "/demo/app", "timestamp": "2026-10-10T10:00:00.000Z"}
+{"type": "message", "id": "u", "parentId": null, "timestamp": "2026-10-10T10:00:00.000Z", "message": {"role": "user", "content": [{"type": "text", "text": "Run the test suite"}]}}
+{"type": "message", "id": "a", "parentId": "u", "timestamp": "2026-10-10T10:00:01.000Z", "message": {"role": "assistant", "model": "pi-example", "content": [{"type": "toolCall", "id": "bash", "name": "bash", "arguments": {"command": "npm test"}}]}}
+{"type": "message", "id": "r", "parentId": "a", "timestamp": "2026-10-10T10:00:04.000Z", "message": {"role": "toolResult", "toolCallId": "bash", "content": [{"type": "text", "text": "Tests: 12 passed"}], "isError": false}}
+{"type": "message", "id": "b", "parentId": "r", "timestamp": "2026-10-10T10:00:05.000Z", "message": {"role": "assistant", "content": [{"type": "text", "text": "All tests passed."}]}}

@@ -1,0 +1,60 @@
+{
+  "info": {
+    "id": "opencode-demo",
+    "title": "Verify the build",
+    "directory": "/demo/app",
+    "time": {
+      "created": 1791626400000,
+      "updated": 1791626405000
+    }
+  },
+  "messages": [
+    {
+      "info": {
+        "id": "u",
+        "role": "user",
+        "time": {
+          "created": 1791626400000
+        }
+      },
+      "parts": [
+        {
+          "type": "text",
+          "text": "Check the build"
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "a",
+        "role": "assistant",
+        "modelID": "opencode-example",
+        "time": {
+          "created": 1791626401000
+        }
+      },
+      "parts": [
+        {
+          "type": "tool",
+          "tool": "bash",
+          "callID": "bash",
+          "state": {
+            "status": "error",
+            "input": {
+              "command": "npm run build"
+            },
+            "error": "src/main.ts: Type error: missing property name",
+            "time": {
+              "start": 1791626401000,
+              "end": 1791626404000
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "The build failed with a type error."
+        }
+      ]
+    }
+  ]
+}

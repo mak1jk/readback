@@ -1,0 +1,45 @@
+{
+  "sessionId": "gemini-demo",
+  "startTime": "2026-10-10T10:00:00.000Z",
+  "lastUpdated": "2026-10-10T10:00:05.000Z",
+  "directories": [
+    "/demo/app"
+  ],
+  "messages": [
+    {
+      "id": "u",
+      "type": "user",
+      "timestamp": "2026-10-10T10:00:00.000Z",
+      "content": "Read the project config"
+    },
+    {
+      "id": "a",
+      "type": "gemini",
+      "timestamp": "2026-10-10T10:00:04.000Z",
+      "model": "gemini-example",
+      "content": "The config enables validation.",
+      "toolCalls": [
+        {
+          "id": "read",
+          "name": "read_file",
+          "args": {
+            "file_path": "/demo/app/src/config.ts"
+          },
+          "timestamp": "2026-10-10T10:00:01.000Z",
+          "status": "success",
+          "result": [
+            {
+              "text": "export const validation = true;"
+            }
+          ]
+        }
+      ],
+      "tokens": {
+        "input": 50,
+        "output": 10,
+        "cached": 10,
+        "thoughts": 4
+      }
+    }
+  ]
+}

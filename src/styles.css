@@ -1,0 +1,24 @@
+:root{--bg:#161826;--fg:#e9e9ed;--fg-strong:#f3f5fe;--fg-2:#e4e7f5;--fg-3:#cfd3e5;--fg-4:#b2b6ca;--muted:#9397ab;--faint:#75798c;--dim:#595d6c;--line-2:#3f424d;--line:#292b31;--line-soft:#1f2130;--surface:#232532;--hover:#1d1f2e;--code:#1b1d2b;--accent:#9184d9;--accent-fg:#b5abfc;--accent-fg-2:#d2cefd;--accent-fg-3:#e7e5fe;--sel:#423a6a;--tint:#2b2741;--bar:#5d5294;--bar-2:#796cbf;--tool:oklch(0.72 0.08 200);--fail:oklch(0.7 0.13 25);--fail-bg:oklch(0.32 0.06 25);--fail-fg:oklch(0.86 0.07 25);--fail-text:oklch(0.78 0.11 25);--line-2-0:rgba(63,66,77,0);--overlay:rgba(22,24,38,0.92);--syn-kw:oklch(0.78 0.11 305);--syn-str:oklch(0.8 0.1 145);--syn-num:oklch(0.8 0.1 60);--syn-fn:oklch(0.8 0.09 245);--syn-type:oklch(0.8 0.08 190);--syn-dec:oklch(0.78 0.1 20);--add-bg:oklch(0.7 0.12 145 / 0.13);--del-bg:oklch(0.7 0.13 25 / 0.13);--add-fg:oklch(0.8 0.12 145);--del-fg:oklch(0.76 0.12 25);color-scheme:dark}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:var(--accent-fg);text-decoration:none}a:hover{color:var(--accent-fg-2)}
+::selection{background:var(--sel)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px;border:3px solid var(--bg)}::-webkit-scrollbar-track{background:transparent}
+
+/* Hover states (the prototype's style-hover); !important beats inline styles. */
+.h-surface:hover{background:var(--surface)!important}
+.h-hover:hover{background:var(--hover)!important}
+.h-hover-fg:hover{background:var(--hover)!important;color:var(--fg)!important}
+.h-surface-fg:hover{background:var(--surface)!important;color:var(--fg)!important}
+.h-tint:hover{background:var(--tint)!important}
+.h-fail:hover{background:var(--fail-bg)!important;color:var(--fail-fg)!important}
+.h-fg:hover{color:var(--fg)!important}
+.h-accent2:hover{color:var(--accent-fg-2)!important}
+.h-bar:hover{background:var(--accent-fg)!important}
+
+@media print{
+  aside,nav,.no-print{display:none!important}
+  #root>div{height:auto!important;overflow:visible!important}
+  main div{overflow:visible!important;max-height:none!important}
+}
